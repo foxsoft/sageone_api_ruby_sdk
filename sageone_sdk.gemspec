@@ -18,13 +18,13 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'sawyer', '~> 0.5.3'
-  spec.add_dependency 'faraday_middleware', "~> 0.9.1"
+  spec.add_dependency 'sawyer', '>= 0.5.3'
+  spec.add_dependency 'faraday_middleware', ">= 0.9.1"
   spec.add_dependency 'hashie'
   spec.add_dependency 'yard'
   spec.add_dependency "activesupport", ">= 4.0.4"
 
-  spec.add_development_dependency "bundler", "~> 1.7"
+  spec.add_development_dependency "bundler", ">= 1.7"
   spec.add_development_dependency 'cane'
   spec.add_development_dependency 'flay'
   spec.add_development_dependency 'flog'
