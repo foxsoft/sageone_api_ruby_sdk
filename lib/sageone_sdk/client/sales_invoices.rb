@@ -60,6 +60,12 @@ module SageoneSdk
       def delete_sales_invoice(id, options = {})
         delete "sales_invoices/#{id}"
       end
+      
+      # Create a payment towards a sales invoice.
+      def create_sales_invoice_payment(id, data, options={})
+        post "sales_invoices/#{id}/payments", :sales_invoice_payment => data
+      end
+      
     end
   end
 end
