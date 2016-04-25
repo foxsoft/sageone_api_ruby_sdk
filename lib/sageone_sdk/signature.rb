@@ -106,11 +106,11 @@ module SageoneSdk
     def percent_encode(str)
       # Replaced deprecated URI.escape with CGI.escape
       # CGI.escape replaces spaces with "+", so we also need to substitute them with "%20"
-      CGI.escape(str).gsub("+", "%20")
+      CGI.escape(str.to_s).gsub("+", "%20")
     end
 
     def percent_decode(str)
-      CGI.unescape(str).gsub("%20", "+")
+      CGI.unescape(str.to_s).gsub("%20", "+")
     end
   end
 end
